@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-// import FakeContainer from '../../containers/FakeContainer/';
-import CardContainer from '../../containers/CardContainer/CardContainer';
+// import './App.css';
+import CardContainer from '../../CardContainer/CardContainer';
 import * as api from '../../helper/api-helper';
 import { storeTypes } from '../../actions';
 import { connect } from 'react-redux';
@@ -46,3 +45,69 @@ export const mapDispatchToProps = dispatch => ({
 
 
 export default connect(null, mapDispatchToProps)(App);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from 'react';
+// import PropTypes, { shape, func, string } from 'prop-types';
+// import { connect } from 'react-redux';
+// // import { fakeAction } from '../../actions';
+// class FakeContainer extends Component {
+
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={()=> {
+//           // this.props.fakeAction()
+//           alert('FAKE')
+//         }}> FAKE </button>
+//       </div>
+//     );
+//   }
+// }
+
+// FakeContainer.propTypes = {
+//   fake: shape({ fake: string }),
+//   fakeAction: func.isRequired
+// };
+
+// const mapStateToProps = ({ fake }) => ({ fake });
+// const mapDispatchToProps = dispatch => ({ fakeAction:
+//   () => dispatch(fakeAction())
+// });
+// export default connect(mapStateToProps, mapDispatchToProps)(FakeContainer);
