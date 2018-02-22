@@ -23,6 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --watchAll",
     "eject": "react-scripts eject",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./src/components/*/*.js"
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/containers/*/*.js"
   }
 }

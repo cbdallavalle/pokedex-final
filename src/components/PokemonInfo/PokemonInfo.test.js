@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { PokemonInfo } from './PokemonInfo';
 import { shallow } from 'enzyme';

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
-import CardContainer from '..//CardContainer/CardContainer';
-import * as api from '../../helper/api-helper';
-import { storeTypes } from '../../actions';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import CardContainer from '..//CardContainer/CardContainer';
+import { storeTypes } from '../../actions';
+import * as api from '../../helper/api-helper';
+import './App.css';
 
 export class App extends Component {
   constructor() {
@@ -11,11 +12,11 @@ export class App extends Component {
     this.state = {
       error: '',
       pokeTypes: {}
-    }
+    };
   }
 
   componentDidMount = async() => {
-    await this.cleanPokemonTypes()
+    await this.cleanPokemonTypes();
   }
 
   cleanPokemonTypes = async() => {
@@ -38,8 +39,12 @@ export class App extends Component {
   }
 }
 
+App.propTypes = {
+  storeTypes: PropTypes.func.isRequired
+};
+
 export const mapDispatchToProps = dispatch => ({
   storeTypes: types => dispatch(storeTypes(types))
-})
+});
 
 export default connect(null, mapDispatchToProps)(App);
