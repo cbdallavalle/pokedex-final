@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot when clicked is false and pokemonToDisplay does not exist 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    handleClick={[MockFunction]}
+    type="electric"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          electric
+        </h1>,
+        undefined,
+      ],
+      "className": "Card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "electric",
+        },
+        "ref": null,
+        "rendered": "electric",
+        "type": "h1",
+      },
+      undefined,
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            electric
+          </h1>,
+          undefined,
+        ],
+        "className": "Card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "electric",
+          },
+          "ref": null,
+          "rendered": "electric",
+          "type": "h1",
+        },
+        undefined,
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match the snapshot when clicked is fasle but pokemonToDisplay exists 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    handleClick={[MockFunction]}
+    pokemonToDisplay={
+      Array [
+        Object {
+          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+          "name": "pidgey",
+          "type": "normal",
+          "weight": 18,
+        },
+        Object {
+          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+          "name": "pidgeotto",
+          "type": "normal",
+          "weight": 300,
+        },
+      ]
+    }
+    type="electric"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          electric
+        </h1>,
+        false,
+      ],
+      "className": "Card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "electric",
+        },
+        "ref": null,
+        "rendered": "electric",
+        "type": "h1",
+      },
+      false,
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            electric
+          </h1>,
+          false,
+        ],
+        "className": "Card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "electric",
+          },
+          "ref": null,
+          "rendered": "electric",
+          "type": "h1",
+        },
+        false,
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should match the snapshot when clicked is true and pokemonToDisplay exists 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    handleClick={[MockFunction]}
+    pokemonToDisplay={
+      Array [
+        Object {
+          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+          "name": "pidgey",
+          "type": "normal",
+          "weight": 18,
+        },
+        Object {
+          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+          "name": "pidgeotto",
+          "type": "normal",
+          "weight": 300,
+        },
+      ]
+    }
+    type="electric"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          electric
+        </h1>,
+        Array [
+          <Unknown
+            icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+            name="pidgey"
+            type="normal"
+            weight={18}
+          />,
+          <Unknown
+            icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+            name="pidgeotto"
+            type="normal"
+            weight={300}
+          />,
+        ],
+      ],
+      "className": "Card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "electric",
+        },
+        "ref": null,
+        "rendered": "electric",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+          "name": "pidgey",
+          "type": "normal",
+          "weight": 18,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+          "name": "pidgeotto",
+          "type": "normal",
+          "weight": 300,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            electric
+          </h1>,
+          Array [
+            <Unknown
+              icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+              name="pidgey"
+              type="normal"
+              weight={18}
+            />,
+            <Unknown
+              icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+              name="pidgeotto"
+              type="normal"
+              weight={300}
+            />,
+          ],
+        ],
+        "className": "Card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "electric",
+          },
+          "ref": null,
+          "rendered": "electric",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+            "name": "pidgey",
+            "type": "normal",
+            "weight": 18,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+            "name": "pidgeotto",
+            "type": "normal",
+            "weight": 300,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
