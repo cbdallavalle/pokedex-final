@@ -23,9 +23,10 @@ export class CardContainer extends Component {
   }
 
   displayCards = () => {
-    return Object.keys(this.props.pokeTypes).map( type => {
+    return Object.keys(this.props.pokeTypes).map( (type, index) => {
       return (
         <Card 
+          key={ index }
           type={ type } 
           handleClick={ this.handleClick }
           pokemonToDisplay={this.state[type]}
@@ -35,7 +36,6 @@ export class CardContainer extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <section className="CardContainer">
         { this.displayLoadingGif() }
@@ -50,15 +50,3 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, null)(CardContainer);
-
-
-// = ({ pokeTypes }) => {
-//   const loading = !Object.keys(pokeTypes).length ? <img src={loadingGif} alt="loading" /> : <div>LOADED</div>
-//   const { bug, fighting, flying, ghost, ground, normal, poison, rock, steel } = pokeTypes;
-
-//   return (
-//     <section className="CardContainer">
-//       { loading }
-//     </section>
-//   )
-// }

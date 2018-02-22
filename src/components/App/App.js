@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import FakeContainer from '../../containers/FakeContainer/';
 import CardContainer from '../../containers/CardContainer/CardContainer';
 import * as api from '../../helper/api-helper';
 import { storeTypes } from '../../actions';
@@ -16,18 +15,17 @@ export class App extends Component {
   }
 
   componentDidMount = async() => {
-    try {
-      const rawPokeTypes = await api.getPokemonTypes();
-      this.cleanPokemonTypes(rawPokeTypes)
-    } catch (error) {
-      this.setState({ error: error.message })
-    }
+    await this.cleanPokemonTypes()
   }
 
-  cleanPokemonTypes = rawPokeTypes => {
-    const pokeTypes = api.cleanPokemonTypes(rawPokeTypes);
-    this.props.storeTypes(pokeTypes)
-    this.setState({ pokeTypes })
+  cleanPokemonTypes = async() => {
+    try {
+      const pokeTypes = await api.getPokemonTypes();
+      this.props.storeTypes(pokeTypes);
+      this.setState({ pokeTypes }) ;
+    } catch (error) {
+      this.setState({ error: error.message });
+    }
   }
 
   render() {
@@ -43,6 +41,5 @@ export class App extends Component {
 export const mapDispatchToProps = dispatch => ({
   storeTypes: types => dispatch(storeTypes(types))
 })
-
 
 export default connect(null, mapDispatchToProps)(App);
