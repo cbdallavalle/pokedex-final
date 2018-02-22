@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import loadingGif from '../../assets/loading.gif';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card';
 import * as api from '../../helper/api-helper';
+import loadingGif from '../../assets/loading.gif';
 import './CardContainer.css';
 
 export class CardContainer extends Component {
@@ -10,22 +11,23 @@ export class CardContainer extends Component {
     super();
     this.state = {
       error: ''
-    }
+    };
   }
 
   handleClick = async (type) => {
-    if(!this.state[type]) {
+    if (!this.state[type]) {
       try {
         const result = await api.getPokemon(this.props.pokeTypes[type], type);
-        this.setState({ [type]: result })
-      } catch(error) {
-        this.setState({ error: error.message })
+        this.setState({ [type]: result });
+      } catch (error) {
+        this.setState({ error: error.message });
       }
     }
   }
 
   displayLoadingGif = () => {
-   return !Object.keys(this.props.pokeTypes).length && <img src={ loadingGif } alt="loading" /> 
+    return !Object.keys(this.props.pokeTypes).length 
+    && <img src={ loadingGif } alt="loading" />; 
   }
 
   displayCards = () => {
@@ -37,8 +39,8 @@ export class CardContainer extends Component {
           handleClick={ this.handleClick }
           pokemonToDisplay={ this.state[type] }
         />
-      )
-    })
+      );
+    });
   }
 
   render() {
@@ -48,12 +50,16 @@ export class CardContainer extends Component {
         { this.displayCards() }
         { this.state.error }
       </section>
-    )
+    );
   }
 }
 
+CardContainer.propTypes = {
+  pokeTypes: PropTypes.object.isRequired
+};
+
 export const mapStateToProps = state => ({
-  pokeTypes: state.pokeTypes,
-})
+  pokeTypes: state.pokeTypes
+});
 
 export default connect(mapStateToProps, null)(CardContainer);
