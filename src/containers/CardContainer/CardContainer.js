@@ -3,6 +3,7 @@ import loadingGif from '../../assets/loading.gif';
 import { connect } from 'react-redux';
 import { Card } from '../../components/Card/Card';
 import * as api from '../../helper/api-helper';
+import './CardContainer.css';
 
 export class CardContainer extends Component {
   constructor(){

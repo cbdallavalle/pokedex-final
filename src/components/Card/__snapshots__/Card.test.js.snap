@@ -24,9 +24,12 @@ ShallowWrapper {
         <h1>
           electric
         </h1>,
-        undefined,
+        <div
+          className="pokemon-info-cont"
+        />,
       ],
       "className": "Card",
+      "id": "",
       "onClick": [Function],
     },
     "ref": null,
@@ -42,7 +45,18 @@ ShallowWrapper {
         "rendered": "electric",
         "type": "h1",
       },
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "pokemon-info-cont",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
     ],
     "type": "article",
   },
@@ -56,9 +70,12 @@ ShallowWrapper {
           <h1>
             electric
           </h1>,
-          undefined,
+          <div
+            className="pokemon-info-cont"
+          />,
         ],
         "className": "Card",
+        "id": "",
         "onClick": [Function],
       },
       "ref": null,
@@ -74,7 +91,18 @@ ShallowWrapper {
           "rendered": "electric",
           "type": "h1",
         },
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "pokemon-info-cont",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
       ],
       "type": "article",
     },
@@ -129,9 +157,12 @@ ShallowWrapper {
         <h1>
           electric
         </h1>,
-        false,
+        <div
+          className="pokemon-info-cont"
+        />,
       ],
       "className": "Card",
+      "id": "",
       "onClick": [Function],
     },
     "ref": null,
@@ -147,7 +178,18 @@ ShallowWrapper {
         "rendered": "electric",
         "type": "h1",
       },
-      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": false,
+          "className": "pokemon-info-cont",
+        },
+        "ref": null,
+        "rendered": false,
+        "type": "div",
+      },
     ],
     "type": "article",
   },
@@ -161,9 +203,12 @@ ShallowWrapper {
           <h1>
             electric
           </h1>,
-          false,
+          <div
+            className="pokemon-info-cont"
+          />,
         ],
         "className": "Card",
+        "id": "",
         "onClick": [Function],
       },
       "ref": null,
@@ -179,7 +224,18 @@ ShallowWrapper {
           "rendered": "electric",
           "type": "h1",
         },
-        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": false,
+            "className": "pokemon-info-cont",
+          },
+          "ref": null,
+          "rendered": false,
+          "type": "div",
+        },
       ],
       "type": "article",
     },
@@ -234,22 +290,25 @@ ShallowWrapper {
         <h1>
           electric
         </h1>,
-        Array [
+        <div
+          className="pokemon-info-cont"
+        >
           <Unknown
             icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
             name="pidgey"
             type="normal"
             weight={18}
-          />,
+          />
           <Unknown
             icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
             name="pidgeotto"
             type="normal"
             weight={300}
-          />,
-        ],
+          />
+        </div>,
       ],
       "className": "Card",
+      "id": "displayPokemon",
       "onClick": [Function],
     },
     "ref": null,
@@ -267,31 +326,57 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "0",
-        "nodeType": "function",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
-          "name": "pidgey",
-          "type": "normal",
-          "weight": 18,
+          "children": Array [
+            <Unknown
+              icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+              name="pidgey"
+              type="normal"
+              weight={18}
+            />,
+            <Unknown
+              icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+              name="pidgeotto"
+              type="normal"
+              weight={300}
+            />,
+          ],
+          "className": "pokemon-info-cont",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "function",
-        "props": Object {
-          "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
-          "name": "pidgeotto",
-          "type": "normal",
-          "weight": 300,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+              "name": "pidgey",
+              "type": "normal",
+              "weight": 18,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+              "name": "pidgeotto",
+              "type": "normal",
+              "weight": 300,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "article",
@@ -306,22 +391,25 @@ ShallowWrapper {
           <h1>
             electric
           </h1>,
-          Array [
+          <div
+            className="pokemon-info-cont"
+          >
             <Unknown
               icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
               name="pidgey"
               type="normal"
               weight={18}
-            />,
+            />
             <Unknown
               icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
               name="pidgeotto"
               type="normal"
               weight={300}
-            />,
-          ],
+            />
+          </div>,
         ],
         "className": "Card",
+        "id": "displayPokemon",
         "onClick": [Function],
       },
       "ref": null,
@@ -339,31 +427,57 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "0",
-          "nodeType": "function",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
-            "name": "pidgey",
-            "type": "normal",
-            "weight": 18,
+            "children": Array [
+              <Unknown
+                icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+                name="pidgey"
+                type="normal"
+                weight={18}
+              />,
+              <Unknown
+                icon="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+                name="pidgeotto"
+                type="normal"
+                weight={300}
+              />,
+            ],
+            "className": "pokemon-info-cont",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "function",
-          "props": Object {
-            "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
-            "name": "pidgeotto",
-            "type": "normal",
-            "weight": 300,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "function",
+              "props": Object {
+                "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+                "name": "pidgey",
+                "type": "normal",
+                "weight": 18,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+                "name": "pidgeotto",
+                "type": "normal",
+                "weight": 300,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "article",

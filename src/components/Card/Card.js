@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { PokemonInfo } from '../PokemonInfo/PokemonInfo';
+import './Card.css'
 
 export class Card extends Component {
   constructor() {
@@ -23,16 +24,21 @@ export class Card extends Component {
   }
 
   render() {
+    const clicked = this.state.clicked === true ? 'displayPokemon' : ''
+    
     return (
       <article 
         className="Card"
+        id={ clicked }
         onClick={ () => {
           this.handleClick();
           this.props.handleClick(this.props.type)
         } }
       >
         <h1>{ this.props.type }</h1>
+        <div className="pokemon-info-cont">
         { this.pokemonInfo() }
+        </div>
       </article>
     )
   }
