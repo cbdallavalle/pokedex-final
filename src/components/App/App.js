@@ -19,11 +19,16 @@ export class App extends Component {
   componentDidMount = async() => {
     try {
       const rawPokeTypes = await api.getPokemonTypes();
-      const pokeTypes = api.cleanPokemonTypes(rawPokeTypes);
-      this.props.storeTypes(pokeTypes)
+      console.log(rawPokeTypes)
+      this.cleanPokemonTypes(rawPokeTypes)
     } catch (error) {
       this.setState({ error: error.message })
     }
+  }
+
+  cleanPokemonTypes = rawPokeTypes => {
+    const pokeTypes = api.cleanPokemonTypes(rawPokeTypes);
+    this.props.storeTypes(pokeTypes)
   }
 
   render() {
