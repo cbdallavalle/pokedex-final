@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer displayLoadingGif should display the loading Gif if pokeType is an empty object 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    pokeTypes={Object {}}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="loading"
+          src="loading.gif"
+        />,
+        Array [],
+        "",
+      ],
+      "className": "CardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "loading",
+          "src": "loading.gif",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      "",
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="loading"
+            src="loading.gif"
+          />,
+          Array [],
+          "",
+        ],
+        "className": "CardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "loading",
+            "src": "loading.gif",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "",
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`CardContainer displayLoadingGif should not display the loading Gif if pokeType is an empty object 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    pokeTypes={
+      Object {
+        "fighting": Array [
+          "56",
+          "57",
+          "58",
+        ],
+        "flying": Array [
+          "21",
+          "22",
+          "23",
+        ],
+        "normal": Array [
+          "16",
+          "17",
+          "18",
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        false,
+        Array [
+          <Card
+            handleClick={[Function]}
+            pokemonToDisplay={undefined}
+            type="normal"
+          />,
+          <Card
+            handleClick={[Function]}
+            pokemonToDisplay={undefined}
+            type="fighting"
+          />,
+          <Card
+            handleClick={[Function]}
+            pokemonToDisplay={undefined}
+            type="flying"
+          />,
+        ],
+        "",
+      ],
+      "className": "CardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "class",
+        "props": Object {
+          "handleClick": [Function],
+          "pokemonToDisplay": undefined,
+          "type": "normal",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "handleClick": [Function],
+          "pokemonToDisplay": undefined,
+          "type": "fighting",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "handleClick": [Function],
+          "pokemonToDisplay": undefined,
+          "type": "flying",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "",
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          Array [
+            <Card
+              handleClick={[Function]}
+              pokemonToDisplay={undefined}
+              type="normal"
+            />,
+            <Card
+              handleClick={[Function]}
+              pokemonToDisplay={undefined}
+              type="fighting"
+            />,
+            <Card
+              handleClick={[Function]}
+              pokemonToDisplay={undefined}
+              type="flying"
+            />,
+          ],
+          "",
+        ],
+        "className": "CardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "class",
+          "props": Object {
+            "handleClick": [Function],
+            "pokemonToDisplay": undefined,
+            "type": "normal",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "handleClick": [Function],
+            "pokemonToDisplay": undefined,
+            "type": "fighting",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "handleClick": [Function],
+            "pokemonToDisplay": undefined,
+            "type": "flying",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "",
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
