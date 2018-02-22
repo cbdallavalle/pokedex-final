@@ -11,7 +11,9 @@ export class CardContainer extends Component {
   }
 
   displayLoadingGif = () => {
-   return !Object.keys(this.props.pokeTypes).length ? <img src={ loadingGif } alt="loading" /> : <div></div>
+   return !Object.keys(this.props.pokeTypes).length 
+    ? <img src={ loadingGif } alt="loading" /> 
+    : <div></div>
   }
 
   handleClick = async (type) => {
