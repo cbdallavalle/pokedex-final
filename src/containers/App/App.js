@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import CardContainer from '../../containers/CardContainer/CardContainer';
+import CardContainer from '..//CardContainer/CardContainer';
 import * as api from '../../helper/api-helper';
 import { storeTypes } from '../../actions';
 import { connect } from 'react-redux';

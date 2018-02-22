@@ -1,7 +1,8 @@
+/* eslint-disable */
 import * as api from './api-helper';
 import { mockData } from '../mockData/mockData';
 
-describe.only('fetchPokemon', () => {
+describe('fetchPokemon', () => {
   it('should call window.fetch and return mockRawPokeTypes', async () => {
     window.fetch = jest.fn().mockImplementation( () => Promise.resolve({
       status: 200,
@@ -21,26 +22,48 @@ describe.only('fetchPokemon', () => {
 })
 
 
-describe("getPokemonTypes", () => {
+describe('getPokemonTypes', () => {
 
-  it('should call window.fetch and return mockRawPokeTypes', async() => {
-    
-  })
-})
-
-describe("getPokemonTypes with window error", () => {
-
-  it('should throw an error if the fetch call has a status of 500', async() => {
+  it('should return clean pokemonType data', async() => {
     window.fetch = jest.fn().mockImplementation( () => Promise.resolve({
-      status: 500
-      })
-    )
-    expect(api.getPokemonTypes()).rejects.toEqual(Error('unable to get pokemon :('))
+      status: 200,
+      json: () => Promise.resolve(mockData.mockRawPokeTypes)
+    }))
+
+    expect(await api.getPokemonTypes()).toEqual(mockData.mockPokeTypes)
   })
 })
 
-describe("cleanPokemonTypes", () => {
+
+describe('cleanPokemonTypes', () => {
   it('should return a cleaned pokemon object', () => {
     expect(api.cleanPokemonTypes(mockData.mockRawPokeTypes)).toEqual(mockData.mockPokeTypes);
   })
 })
+
+describe('getPokemon', () => {
+  it('should return clean pokemon data', async() => {
+    window.fetch = jest.fn().mockImplementation( () => Promise.resolve({
+      status: 200,
+      json: () => Promise.resolve(mockData.mockRawPokemonData)
+    }))
+
+    expect(await api.getPokemon([18], 'flying')).toEqual(mockData.mockCleanPokemonData)
+  })
+})
+
+describe('cleanPokemon', () => {
+  it('should clean raw pokemon data', () => {
+    expect(api.cleanPokemon(mockData.mockRawPokemonData, 'flying')).toEqual(mockData.mockCleanPokemonData[0])
+  })
+})
+
+
+
+
+
+
+
+
+
+
