@@ -9,7 +9,7 @@ export const getPokemonTypes = async() => {
       throw new Error('unable to get pokemon :(')
     }
   } catch(error) {
-      throw new Error('unable to get pokemon :(')
+      throw error
   }
 }
 
