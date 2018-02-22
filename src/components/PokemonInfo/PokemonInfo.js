@@ -1,8 +1,9 @@
 import React from 'react';
+import './PokemonInfo.css';
 
-export const PokemonInfo = ({icon, name, type, weight}) => {
+export const PokemonInfo = ({ icon, name, type, weight }) => {
   return (
-    <div className="pokemon-info">
+    <div className="PokemonInfo">
       <p>{name}</p>
       <p>{type}</p>
       <p>{weight}</p>

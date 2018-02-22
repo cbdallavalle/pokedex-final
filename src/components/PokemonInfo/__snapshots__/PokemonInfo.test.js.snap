@@ -37,7 +37,7 @@ ShallowWrapper {
           src=""
         />,
       ],
-      "className": "pokemon-info",
+      "className": "PokemonInfo",
     },
     "ref": null,
     "rendered": Array [
@@ -110,7 +110,7 @@ ShallowWrapper {
             src=""
           />,
         ],
-        "className": "pokemon-info",
+        "className": "PokemonInfo",
       },
       "ref": null,
       "rendered": Array [
