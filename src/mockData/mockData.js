@@ -21,4 +21,22 @@ export const mockData = {
     {weight: 18, name: "pidgey", icon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png", type: "normal"},
     {weight: 300, name: "pidgeotto", icon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png", type: "normal"}
   ],
+  mockRawPokemonData: {
+    id: "16",
+    name: "pidgey",
+    sprites: {
+      back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/16.png",
+      front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+    },
+    type: "1",
+    weight: 18
+  },
+  mockCleanPokemonData: [
+    {
+      weight: 18,
+      name: "pidgey",
+      icon: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+      type: "flying"
+    }
+  ]
 }

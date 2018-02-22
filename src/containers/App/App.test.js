@@ -42,7 +42,7 @@ describe("App", () => {
 
   })
 
-  it('cleanPokemonTypes should call mockStoreTypes and set state with pokeTypes', async() => {
+  it('cleanPokemonTypes should call mockStoreTypes', async() => {
     api.getPokemonTypes = () => mockData.mockPokeTypes;
 
     await wrapper.instance().cleanPokemonTypes();

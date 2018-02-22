@@ -12,6 +12,7 @@ describe('CardContainer', () => {
   })
 
   it('should start with an empty string for error as a default state', () => {
+    
     expect(wrapper.state()).toEqual({error: ''})
   })
 
@@ -23,29 +24,36 @@ describe('CardContainer', () => {
     }))
 
     await wrapper.instance().handleClick('flying');
+    
     expect(wrapper.state().error).toEqual('unable to get pokemon :(')
   })
 
   it('handleClick should update state if that type of state does not exist', async() => {
     api.getPokemon = () => mockData.mockPokemonToDisplay;
+    
     await wrapper.instance().handleClick('flying');
+    
     expect(wrapper.state().flying).toEqual(mockData.mockPokemonToDisplay)
   })
 
   it('handleClick should not update state if that type of state does exist', async() => {
     wrapper.setState({ flying: 'pidgeotto is super cool' })
     api.getPokemon = () => mockData.mockPokemonToDisplay;
+    
     await wrapper.instance().handleClick('flying');
+    
     expect(wrapper.state().flying).toEqual('pidgeotto is super cool')
   })
 
   //displayLoadingGif & displayCards
   it('the loading Gif should display if pokeType is an empty object but no cards should display', () => {
     wrapper = shallow(<CardContainer pokeTypes={ {} } />)
+    
     expect(wrapper).toMatchSnapshot();
   })
 
   it('the loading Gif should not display if pokeType exists but the cards should display', () => {
+    
     expect(wrapper).toMatchSnapshot();
   })
 })

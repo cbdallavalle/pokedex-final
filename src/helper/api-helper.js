@@ -30,11 +30,10 @@ export const getPokemon = async(pokemonToFetch, type) => {
     const json = await fetchPokemon(`pokemon/${id}`)
     return cleanPokemon(json, type)
   })
-
   return await Promise.all(pokemon)
 }
 
-export const cleanPokemon = async(pokemon, type) => ({
+export const cleanPokemon = (pokemon, type) => ({
     weight: pokemon.weight,
     name: pokemon.name,
     icon: pokemon.sprites.front_default,

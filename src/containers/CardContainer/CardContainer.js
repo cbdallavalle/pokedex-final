@@ -15,8 +15,7 @@ export class CardContainer extends Component {
   handleClick = async (type) => {
     if(!this.state[type]) {
       try {
-        const pokemonToFetch = this.props.pokeTypes[type];
-        const result = await api.getPokemon(pokemonToFetch, type);
+        const result = await api.getPokemon(this.props.pokeTypes[type], type);
         this.setState({ [type]: result })
       } catch(error) {
         this.setState({ error: error.message })
