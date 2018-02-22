@@ -7,21 +7,25 @@ import * as api from '../../helper/api-helper';
 export class CardContainer extends Component {
   constructor(){
     super();
-    this.state = {}
-  }
-
-  displayLoadingGif = () => {
-   return !Object.keys(this.props.pokeTypes).length 
-    ? <img src={ loadingGif } alt="loading" /> 
-    : <div></div>
+    this.state = {
+      error: ''
+    }
   }
 
   handleClick = async (type) => {
     if(!this.state[type]) {
-      const pokemonToFetch = this.props.pokeTypes[type];
-      const result = await api.getPokemon(pokemonToFetch, type);
-      this.setState({ [type]: result })
+      try {
+        const pokemonToFetch = this.props.pokeTypes[type];
+        const result = await api.getPokemon(pokemonToFetch, type);
+        this.setState({ [type]: result })
+      } catch(error) {
+        this.setState({ error: error.message })
+      }
     }
+  }
+
+  displayLoadingGif = () => {
+   return !Object.keys(this.props.pokeTypes).length && <img src={ loadingGif } alt="loading" /> 
   }
 
   displayCards = () => {
@@ -31,17 +35,19 @@ export class CardContainer extends Component {
           key={ index }
           type={ type } 
           handleClick={ this.handleClick }
-          pokemonToDisplay={this.state[type]}
+          pokemonToDisplay={ this.state[type] }
         />
       )
     })
   }
 
   render() {
+    console.log(this.state.error)
     return (
       <section className="CardContainer">
         { this.displayLoadingGif() }
         { this.displayCards() }
+        { this.state.error }
       </section>
     )
   }
