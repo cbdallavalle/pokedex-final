@@ -42,7 +42,6 @@ export class CardContainer extends Component {
   }
 
   render() {
-    console.log(this.state.error)
     return (
       <section className="CardContainer">
         { this.displayLoadingGif() }

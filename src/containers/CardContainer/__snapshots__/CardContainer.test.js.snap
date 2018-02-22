@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardContainer displayLoadingGif should display the loading Gif if pokeType is an empty object 1`] = `
+exports[`CardContainer the loading Gif should display if pokeType is an empty object but no cards should display 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -92,7 +92,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`CardContainer displayLoadingGif should not display the loading Gif if pokeType is an empty object 1`] = `
+exports[`CardContainer the loading Gif should not display if pokeType exists but the cards should display 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
