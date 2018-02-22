@@ -33,10 +33,14 @@ describe("App", () => {
     expect(window.fetch).toHaveBeenCalled();
   })
 
-  it.skip('componenDidMount should set state with an error if fetch returns an error', () => {
-    window.fetch = jest.fn().mockImplementation( () => Promise.reject(Error('unable to get pokemon :(')))
+  it.skip('componenDidMount should set state with an error if fetch returns an error', async() => {
+    //is updating to have error, wrapper calling expect before state updates
+    window.fetch = jest.fn().mockImplementation( () => Promise.resolve({
+      status: 500,
+      error: new Error('unable to get pokemon :(')
+    }))
 
-    const wrapper = shallow(<App storeTypes={mockStoreTypes} />)
+    const wrapper = await shallow(<App storeTypes={mockStoreTypes} />)
     expect(wrapper.state().error).toEqual('unable to get pokemon :(')
   })
 })

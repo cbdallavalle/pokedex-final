@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import FakeContainer from '../../containers/FakeContainer/'
+// import FakeContainer from '../../containers/FakeContainer/';
+import { CardContainer } from '../../containers/CardContainer/CardContainer';
 import * as api from '../../helper/api-helper';
 import { storeTypes } from '../../actions';
 import { connect } from 'react-redux';
-        // <FakeContainer />
-
-
 
 export class App extends Component {
   constructor() {
     super();
     this.state = {
-      error: ''
+      error: '',
+      pokeTypes: {}
     }
   }
 
   componentDidMount = async() => {
     try {
       const rawPokeTypes = await api.getPokemonTypes();
-      console.log(rawPokeTypes)
       this.cleanPokemonTypes(rawPokeTypes)
     } catch (error) {
       this.setState({ error: error.message })
@@ -29,12 +27,15 @@ export class App extends Component {
   cleanPokemonTypes = rawPokeTypes => {
     const pokeTypes = api.cleanPokemonTypes(rawPokeTypes);
     this.props.storeTypes(pokeTypes)
+    this.setState({ pokeTypes })
   }
 
   render() {
+    console.log(this.state.pokeTypes)
     return (
       <div className='App'>
         <h1 className='header'> POKéDEX </h1>
+        <CardContainer pokeTypes={ this.state.pokeTypes } />
       </div>
     );
   }
